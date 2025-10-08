@@ -1,0 +1,19 @@
+@EndUserText.label: 'Service Definition for RGP and NRGP'
+define service ZSRV_GATE {
+  expose ZI_GATE_NRGP_HDR;
+  expose ZC_GATE_NRGP_HDR;
+  expose ZC_GATE_NRGP_ITEM;
+  expose zc_nrgp_item2;
+  expose ZCDS_RGP_ITEM;
+  expose ZCDS_RGP_HDR;
+  expose ZI_RGP_VH;
+  expose I_ProductStdVH;
+  expose ZI_NRGP_HDR_VH;
+  expose I_Plant;
+  expose I_TaxCodeText;
+  expose I_StorageLocation;
+  expose ZI_NRGP_PRODUCT;
+  expose ZI_TAXCODE_VH;
+  expose zr_rgp_item;
+  expose ZCDS_RGP_ITEM_EXTEND;
+}

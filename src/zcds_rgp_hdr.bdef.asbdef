@@ -1,0 +1,49 @@
+managed implementation in class zbp_cds_rgp_hdr unique;
+strict ( 2 );
+
+define behavior for ZCDS_RGP_HDR alias ZgateRgpHdr
+persistent table zgate_rgp_hdr
+etag master LastChangedAt
+lock master
+authorization master ( global )
+
+{
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+
+  field ( readonly : update )
+  Documentnumber;
+
+  create;
+  update;
+
+  mapping for zgate_rgp_hdr
+    {
+      Documentnumber      = document_no;
+      Documentdate        = document_date;
+      Plant               = plant;
+      FromStorageLocation = from_storage_location;
+      ToStorageLocation   = to_storage_location;
+      Status              = status;
+      Description1        = description1;
+      Description2        = description2;
+      PartnerCode         = partner_code;
+      PartnerName         = partner_name;
+      PartnerType         = partner_type;
+      Address1            = address1;
+      Address2            = address2;
+      StateCode           = state_code;
+      Pin                 = pin;
+      CreatedBy           = created_by;
+      CreatedAt           = created_at;
+      LastChangedBy       = last_changed_by;
+      LastChangedAt       = last_changed_at;
+      LocalLastChangedAt  = local_last_changed_at;
+    }
+
+}

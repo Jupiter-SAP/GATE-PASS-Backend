@@ -1,0 +1,181 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.value: 'DocumentNo'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'PartnerName'
+
+annotate view ZI_GATE_NRGP_HDR with
+{
+  @EndUserText.label: 'Document No'
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10,
+    label: 'Document No'
+  } ]
+  @UI.lineItem: [ {
+    position: 10,
+    label: 'Document No'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_GATE_NRGP_HDR', element: 'DocumentNo' } }]
+  DocumentNo;
+
+  @EndUserText.label: 'Plant'
+  @UI.identification: [ {
+    position: 20,
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 20,
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_GATE_NRGP_HDR', element: 'Plant' } }]
+  Plant;
+
+  @EndUserText.label: 'Partner Type'
+  @UI.identification: [ {
+    position: 30,
+    label: 'Partner Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 30,
+    label: 'Partner Type'
+  } ]
+  PartnerType;
+
+  @EndUserText.label: 'Partner Code'
+  @UI.identification: [ {
+    position: 40,
+    label: 'Partner Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 40,
+    label: 'Partner Code'
+  } ]
+  PartnerCode;
+
+  @EndUserText.label: 'Document Date'
+  @UI.identification: [ {
+    position: 50,
+    label: 'Document Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 50,
+    label: 'Document Date'
+  } ]
+  DocumentDate;
+
+  @EndUserText.label: 'Partner Name'
+  @UI.identification: [ {
+    position: 60,
+    label: 'Partner Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 60,
+    label: 'Partner Name'
+  } ]
+  PartnerName;
+
+  @EndUserText.label: 'From Storage Location'
+  @UI.identification: [ {
+    position: 70,
+    label: 'From Storage Location'
+  } ]
+  @UI.lineItem: [ {
+    position: 70,
+    label: 'From Storage Location'
+  } ]
+    @UI.selectionField: [ {
+    position: 30
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZC_GATE_NRGP_HDR', element: 'FromStorageLoc' } }]
+  FromStorageLoc;
+
+  @EndUserText.label: 'Address 1'
+  @UI.identification: [ {
+    position: 80,
+    label: 'Address 1'
+  } ]
+  @UI.lineItem: [ {
+    position: 80,
+    label: 'Address 1'
+  } ]
+  Addr1;
+
+  @EndUserText.label: 'Address 2'
+  @UI.identification: [ {
+    position: 90,
+    label: 'Address 2'
+  } ]
+  @UI.lineItem: [ {
+    position: 90,
+    label: 'Address 2'
+  } ]
+  Addr2;
+
+  @EndUserText.label: 'State Code'
+  @UI.identification: [ {
+    position: 100,
+    label: 'State Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 100,
+    label: 'State Code'
+  } ]
+  StateCode;
+
+  @EndUserText.label: 'Pin'
+  @UI.identification: [ {
+    position: 110,
+    label: 'Pin'
+  } ]
+  @UI.lineItem: [ {
+    position: 110,
+    label: 'Pin'
+  } ]
+  Pin;
+
+  @EndUserText.label: 'Status'
+  @UI.identification: [ {
+    position: 120,
+    label: 'Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 120,
+    label: 'Status'
+  } ]
+  Status;
+
+  @EndUserText.label: 'Description 1'
+  @UI.identification: [ {
+    position: 130,
+    label: 'Description 1'
+  } ]
+  @UI.lineItem: [ {
+    position: 130,
+    label: 'Description 1'
+  } ]
+  Description1;
+
+  @EndUserText.label: 'Description 2'
+  @UI.identification: [ {
+    position: 140,
+    label: 'Description 2'
+  } ]
+  @UI.lineItem: [ {
+    position: 140,
+    label: 'Description 2'
+  } ]
+  Description2;
+}

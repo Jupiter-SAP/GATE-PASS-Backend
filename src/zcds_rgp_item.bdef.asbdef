@@ -1,0 +1,14 @@
+managed implementation in class zbp_cds_rgp_item unique;
+strict ( 2 );
+
+define behavior for ZCDS_RGP_ITEM //alias <alias_name>
+persistent table zgate_rgp_item
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Linenumber;
+}

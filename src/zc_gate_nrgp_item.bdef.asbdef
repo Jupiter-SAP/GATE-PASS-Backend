@@ -1,0 +1,62 @@
+managed implementation in class zbp_c_gate_nrgp_item unique;
+strict ( 2 );
+
+define behavior for ZC_GATE_NRGP_ITEM
+persistent table zgate_nrgp_item
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  mapping for zgate_nrgp_item
+  {
+    DocumentNo = document_no;
+    LineNum = line_no;
+    NrgpNo = nrgp_no;
+    NrgpLineNo = nrgp_line_no;
+    ReferenceDocument = reference_document;
+    ReferenceDocItem = reference_doc_item;
+    ReferenceDocYear = reference_doc_year;
+    NrgpDate = nrgp_date;
+    ReferenceDocDate = reference_doc_date;
+    ItemCode = product;
+    ItemName = productname;
+    Description = item_text;
+    Qty = quantity;
+    Unit = unit;
+    StorageLocation = storagelocation;
+    Plant = plant;
+    Rate = rate;
+    ItemAmount = item_amount;
+    TaxCode = tax_code;
+    TaxPercent = tax_percent;
+    TaxAmount = tax_amount;
+    NetAmount = net_amount;
+    NetWeight = net_weight;
+    Batch = batch;
+    CostCenter = cost_center;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  // Field characteristics
+  field ( readonly )
+      DocumentNo,
+      LineNum,
+      NrgpNo,
+      NrgpLineNo,
+      ReferenceDocument,
+      ReferenceDocItem,
+      ReferenceDocYear,
+      CreatedBy,
+      CreatedAt,
+      LastChangedBy,
+      LastChangedAt,
+      LocalLastChangedAt;
+}

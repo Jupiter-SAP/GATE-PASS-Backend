@@ -1,0 +1,41 @@
+managed implementation in class zbp_c_gate_nrgp_hdr unique;
+strict ( 2 );
+
+define behavior for ZC_GATE_NRGP_HDR
+persistent table zgate_nrgp_hdr
+etag master LastChangedAt
+lock master
+authorization master ( global )
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  mapping for zgate_nrgp_hdr
+  {
+    DocumentNo = document_no;
+    Plant = plant;
+    PartnerType = partner_type;
+    PartnerCode = partner_code;
+    DocumentDate = document_date;
+    PartnerName = partner_name;
+    FromStorageLoc = from_storage_loc;
+    Addr1 = addr1;
+    Addr2 = addr2;
+    StateCode = state_code;
+    Pin = pin;
+    Status = status;
+    Description1 = description1;
+    Description2 = description2;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  // Field characteristics
+  field ( readonly ) DocumentNo;
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt, LocalLastChangedAt;
+
+}
